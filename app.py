@@ -4,8 +4,8 @@ from dash import html, dcc, Input, Output
 import plotly.express as px
 
 # Load preprocessed data
-inters = pd.read_csv('./data/inters.csv')
-df = pd.read_csv('./data/df.csv')
+inters= pd.read_csv('https://data.sfgov.org/resource/gmfx-8h6i.csv?$limit=999999999')
+df = pd.read_csv('https://data.sfgov.org/resource/ubvf-ztfx.csv?$limit=9999999')
 df = df[df['accident_year'].isin([2024 - year for year in range(10)])]
 # Initialize Dash app
 app = dash.Dash(__name__)
